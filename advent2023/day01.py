@@ -1,7 +1,5 @@
 import re
 
-WORD_RE = re.compile(r'one|two|three|four|five|six|seven|eight|nine')
-
 
 def get_input():
     with open('./data/day1.txt') as input_file:
