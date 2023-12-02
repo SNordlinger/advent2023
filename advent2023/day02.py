@@ -31,15 +31,6 @@ def parse_entry(entry_text):
     return (int(parts[0]), parts[1])
 
 
-def sum_game(game):
-    entries = itertools.chain.from_iterable(game)
-    sums = {'red': 0, 'green': 0, 'blue': 0}
-    for (count, color) in entries:
-        sums[color] += count
-
-    return sums
-
-
 def check_game(game):
     return all(sub['red'] <= 12 and sub['green'] <= 13 and sub['blue'] <= 14
                for sub in game)
